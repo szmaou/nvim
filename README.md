@@ -1,9 +1,40 @@
-**This repo is supposed to be used as config by NvChad users!**
+# nvim config
 
-- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
-- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
-- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+Neovim configuration based on **NvChad v2.5**.
 
-# Credits
+## Theme
 
-1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+- **onedark** — via base46
+
+## LSP Servers
+
+Installed via Mason:
+`bashls`, `cssls`, `html`, `ts_ls`, `jsonls`, `emmet_language_server`, `marksman`
+
+## Formatter (conform.nvim)
+
+Format on save — prettier untuk frontend files, shfmt untuk shell, stylua untuk lua.
+
+## Treesitter
+
+Parsers: `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`, `bash`
+
+## Custom Keymaps
+
+| Key | Action |
+|---|---|
+| `;` | Enter command mode |
+| `jk` | Exit insert mode |
+
+## Plugins
+
+- lazy.nvim — package manager
+- mason.nvim — LSP installer
+- nvim-cmp + luasnip — autocompletion & snippets
+- telescope.nvim — fuzzy finder
+- nvim-tree.lua — file explorer
+- conform.nvim — formatter
+- gitsigns.nvim — git indicators
+- indent-blankline.nvim — indent guides
+- which-key.nvim — keymap popup
+- cord.nvim — Discord Rich Presence
