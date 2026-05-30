@@ -6,18 +6,26 @@ Neovim configuration based on **NvChad v2.5**.
 
 - **onedark** — via base46
 
-## LSP Servers
+## LSP Servers & Formatter
 
-Installed via Mason:
-`bashls`, `cssls`, `html`, `ts_ls`, `jsonls`, `emmet_language_server`, `marksman`
-
-## Formatter (conform.nvim)
-
-Format on save — prettier untuk frontend files, shfmt untuk shell, stylua untuk lua.
+| Bahasa | LSP | Formatter |
+|---|---|---|
+| HTML / CSS | html, cssls | prettier |
+| JavaScript / TypeScript / JSON | ts_ls, jsonls | prettier |
+| Emmet | emmet_language_server | — |
+| Markdown | marksman | prettier |
+| Shell (sh, bash, zsh) | bashls | beautysh |
+| Python | pyright | ruff |
+| Java | jdtls | LSP fallback |
+| C / C++ | clangd | clang-format |
+| C# | omnisharp | LSP fallback |
+| Go | gopls | gofmt |
+| Rust | rust_analyzer | rustfmt |
 
 ## Treesitter
 
-Parsers: `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`, `bash`
+Parsers: `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`,
+`bash`, `python`, `java`, `c`, `cpp`, `c_sharp`, `go`, `rust`
 
 ## Custom Keymaps
 

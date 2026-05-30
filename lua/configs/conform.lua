@@ -10,6 +10,13 @@ local options = {
     typescript = { "prettier" },
     json = { "prettier" },
     markdown = { "prettier" },
+    python = { "ruff_format" },
+    c = { "clang-format" },
+    cpp = { "clang-format" },
+    java = {},
+    cs = {},
+    go = { "gofmt" },
+    rust = { "rustfmt" },
   },
 
   format_on_save = {

@@ -22,6 +22,7 @@ return {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
        "html", "css", "javascript", "typescript", "json", "bash",
+       "python", "java", "c", "cpp", "c_sharp", "go", "rust",
   		},
   	},
   },
