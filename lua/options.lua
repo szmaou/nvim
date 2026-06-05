@@ -1,6 +1,11 @@
 require "nvchad.options"
 
--- add yours here!
+local o = vim.o
 
--- local o = vim.o
--- o.cursorlineopt = "both" -- to enable cursorline!
+o.relativenumber = true
+o.scrolloff = 8
+o.splitright = true
+o.splitbelow = true
+o.undofile = true
+o.timeoutlen = 300
+o.updatetime = 100
