@@ -13,7 +13,6 @@ local options = {
     typescript = { "prettier" },
     json = { "prettier" },
     markdown = { "prettier" },
-    toml = { "taplo" },
     python = { "ruff_format" },
     c = { "clang-format" },
     cpp = { "clang-format" },
