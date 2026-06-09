@@ -2,7 +2,6 @@ require "nvchad.options"
 
 local o = vim.o
 
-o.relativenumber = true
 o.scrolloff = 8
 o.splitright = true
 o.splitbelow = true

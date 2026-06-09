@@ -48,58 +48,19 @@ return {
     opts = require "configs.cord",
   },
 
-  -- DAP
-  {
-    "mfussenegger/nvim-dap",
-    lazy = true,
-    config = function()
-      require "configs.dap"
-    end,
-  },
-
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap" },
-    lazy = true,
-  },
-
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    dependencies = { "mfussenegger/nvim-dap" },
-    lazy = true,
-  },
-
-  {
-    "theHamsta/nvim-dap-virtual-text",
-    dependencies = { "mfussenegger/nvim-dap" },
-    lazy = true,
-  },
-
-  -- Test runner
-  {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-neotest/nvim-nio",
-      "nvim-neotest/neotest-python",
-      "nvim-neotest/neotest-go",
-      "rouge8/neotest-rust",
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    lazy = true,
-    config = function()
-      require "configs.neotest"
-    end,
-  },
-
   -- Session management
   {
     "folke/persistence.nvim",
-    event = "BufReadPre",
-    opts = {
-      options = { "buffers", "curdir", "tabpages", "winsize", "help", "globals" },
-      save_dir = vim.fn.stdpath "state" .. "/sessions/",
-    },
+    lazy = false,
+    config = function()
+      require("persistence").setup {
+        options = { "curdir", "tabpages", "winsize", "help", "globals" },
+        save_dir = vim.fn.stdpath "state" .. "/sessions/",
+      }
+      vim.schedule(function()
+        require("persistence").load()
+      end)
+    end,
   },
 
   -- Markdown preview

@@ -15,17 +15,19 @@ Neovim configuration based on **NvChad v2.5**.
 | Emmet                          | emmet_language_server | —            |
 | Markdown                       | marksman              | prettier     |
 | Shell (sh, bash, zsh)          | bashls                | beautysh     |
+| Fish                           | —                     | fish_indent  |
 | Python                         | pyright               | ruff         |
 | Java                           | jdtls                 | LSP fallback |
 | C / C++                        | clangd                | clang-format |
 | C#                             | omnisharp             | LSP fallback |
 | Go                             | gopls                 | gofmt        |
 | Rust                           | rust_analyzer         | rustfmt      |
+| TOML                           | —                     | taplo        |
 
 ## Treesitter
 
 Parsers: `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`,
-`bash`, `python`, `java`, `c`, `cpp`, `c_sharp`, `go`, `rust`
+`bash`, `python`, `java`, `c`, `cpp`, `c_sharp`, `go`, `rust`, `toml`
 
 ## Custom Keymaps
 
@@ -35,25 +37,6 @@ Parsers: `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `jso
 | `jk` | Exit insert mode |
 | `<leader>q` | Quit |
 | `<A-Up/Down>` | Move line up/down (n/i/v) |
-| `<leader>db` | Toggle breakpoint |
-| `<leader>dB` | Conditional breakpoint |
-| `<leader>dc` | Continue |
-| `<leader>dso` | Step over |
-| `<leader>dsi` | Step into |
-| `<leader>dI` | Step out |
-| `<leader>dt` | Terminate |
-| `<leader>du` | Toggle DAP UI |
-| `<leader>dr` | Open REPL |
-| `<leader>tt` | Run nearest test |
-| `<leader>tf` | Run test file |
-| `<leader>ts` | Run all suites |
-| `<leader>to` | Toggle output panel |
-| `<leader>tl` | Run last test |
-| `<leader>tx` | Stop test |
-| `<leader>tS` | Toggle summary |
-| `<leader>qs` | Save session |
-| `<leader>ql` | Load session |
-| `<leader>qd` | Stop session |
 | `<leader>mp` | Toggle markdown preview |
 | `<leader>u` | Toggle undotree |
 
@@ -68,8 +51,6 @@ Parsers: `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `jso
 - gitsigns.nvim — git indicators
 - indent-blankline.nvim — indent guides
 - which-key.nvim — keymap popup
-- nvim-dap + nvim-dap-ui — debugger
-- neotest — test runner
 - persistence.nvim — session management
 - markdown-preview.nvim — live markdown preview
 - undotree — visual undo history
