@@ -48,21 +48,6 @@ return {
     opts = require "configs.cord",
   },
 
-  -- Session management
-  {
-    "folke/persistence.nvim",
-    lazy = false,
-    config = function()
-      require("persistence").setup {
-        options = { "curdir", "tabpages", "winsize", "help", "globals" },
-        save_dir = vim.fn.stdpath "state" .. "/sessions/",
-      }
-      vim.schedule(function()
-        require("persistence").load()
-      end)
-    end,
-  },
-
   -- Markdown preview
   {
     "iamcco/markdown-preview.nvim",
