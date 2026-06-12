@@ -37,6 +37,7 @@ return {
         "go",
         "rust",
         "vue",
+        "qmljs",
       },
     },
   },

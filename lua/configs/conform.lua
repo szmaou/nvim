@@ -13,6 +13,7 @@ local options = {
     typescript = { "prettier" },
     json = { "prettier" },
     markdown = { "prettier" },
+    qml = { "qmlls" },
     python = { "ruff_format" },
     c = { "clang-format" },
     cpp = { "clang-format" },
