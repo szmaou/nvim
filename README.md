@@ -2,34 +2,62 @@
 
 Neovim configuration based on **NvChad v2.5**.
 
-Theme: `github_dark` via NvChad base46. NvDash dashboard enabled on startup.
+## Installation
 
-## LSP Servers & Formatter
+```bash
+git clone --depth 1 git@github.com:szmaou/nvim.git ~/.config/nvim
+nvim --headless "+Lazy! sync" +qa
+```
+
+## File Structure
+
+```
+~/.config/nvim/
+├── init.lua              # entry point
+├── lua/
+│   ├── chadrc.lua        # NvChad config (theme, UI)
+│   ├── mappings.lua      # custom keymaps
+│   ├── options.lua       # custom options
+│   ├── plugins/init.lua  # extra plugin specs
+│   └── configs/
+│       ├── conform.lua   # formatters
+│       ├── lspconfig.lua # LSP servers
+│       └── cord.lua      # Discord RPC
+└── README.md
+```
+
+## LSP & Formatters
 
 | Bahasa                         | LSP                   | Formatter    |
 | ------------------------------ | --------------------- | ------------ |
-| HTML / CSS                     | html, cssls           | prettier     |
-| JavaScript / TypeScript / JSON | ts_ls, jsonls         | prettier     |
-| Emmet                          | emmet_language_server | —            |
-| Markdown                       | marksman              | prettier     |
-| Shell (sh, bash, zsh)          | bashls                | beautysh     |
-| Fish                           | —                     | fish_indent  |
-| Lua                            | —                     | stylua       |
-| Python                         | pyright               | ruff         |
-| Java                           | jdtls                 | LSP fallback |
 | C / C++                        | clangd                | clang-format |
 | C#                             | omnisharp             | LSP fallback |
+| Emmet                          | emmet_language_server | —            |
+| Fish                           | —                     | fish_indent  |
 | Go                             | gopls                 | gofmt        |
-| Rust                           | rust_analyzer         | rustfmt      |
+| HTML / CSS                     | html, cssls           | prettier     |
+| Java                           | jdtls                 | LSP fallback |
+| JavaScript / TypeScript / JSON | ts_ls, jsonls         | prettier     |
 | Kotlin                         | kotlin_lsp            | ktlint       |
+| Lua                            | —                     | stylua       |
+| Markdown                       | marksman              | prettier     |
+| Python                         | pyright               | ruff         |
+| QML                            | qmlls                 | qmlls        |
+| Rust                           | rust_analyzer         | rustfmt      |
+| Shell (sh, bash, zsh)          | bashls                | beautysh     |
+| Tailwind CSS                   | tailwindcss           | —            |
 | TOML                           | —                     | taplo        |
 | Vue                            | vue_ls                | prettier     |
-| Tailwind CSS                   | tailwindcss           | —            |
-| QML                            | qmlls                 | qmlls        |
+
+## Extra Plugins
+
+- **markdown-preview.nvim** — live markdown preview
+- **undotree** — visual undo history
+- **cord.nvim** — Discord Rich Presence
 
 ## Treesitter
 
-Parsers: `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`,
+`vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`,
 `bash`, `python`, `java`, `c`, `cpp`, `c_sharp`, `go`, `rust`, `vue`, `qmljs`,
 `kotlin`, `toml`
 
@@ -43,19 +71,3 @@ Parsers: `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `jso
 | `<A-Up/Down>` | Move line up/down (n/i/v) |
 | `<leader>mp`  | Toggle markdown preview   |
 | `<leader>u`   | Toggle undotree           |
-
-## Plugins
-
-- lazy.nvim — package manager
-- mason.nvim — LSP/DAP installer
-- nvim-cmp + luasnip — autocompletion & snippets
-- telescope.nvim — fuzzy finder
-- nvim-tree.lua — file explorer
-- conform.nvim — formatter
-- gitsigns.nvim — git indicators
-- indent-blankline.nvim — indent guides
-- which-key.nvim — keymap popup
-- NvDash — dashboard (via NvChad/ui)
-- markdown-preview.nvim — live markdown preview
-- undotree — visual undo history
-- cord.nvim — Discord Rich Presence
