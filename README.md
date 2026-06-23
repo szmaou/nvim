@@ -48,6 +48,7 @@ nvim --headless "+Lazy! sync" +qa
 | Tailwind CSS                   | tailwindcss           | —            |
 | TOML                           | —                     | taplo        |
 | Vue                            | vue_ls                | prettier     |
+| XML                            | lemminx               | xmllint      |
 
 ## Extra Plugins
 
@@ -59,7 +60,7 @@ nvim --headless "+Lazy! sync" +qa
 
 `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`,
 `bash`, `python`, `java`, `c`, `cpp`, `c_sharp`, `go`, `rust`, `vue`, `qmljs`,
-`kotlin`, `toml`
+`kotlin`, `toml`, `xml`
 
 ## Custom Keymaps
 

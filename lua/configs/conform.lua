@@ -4,6 +4,7 @@ local options = {
     bash = { "beautysh" },
     zsh = { "beautysh" },
     fish = { "fish_indent" },
+    xml = { "xmllint" },
     toml = { "taplo" },
     lua = { "stylua" },
     css = { "prettier" },

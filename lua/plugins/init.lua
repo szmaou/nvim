@@ -39,6 +39,7 @@ return {
         "vue",
         "qmljs",
         "kotlin",
+        "xml",
       },
     },
   },
