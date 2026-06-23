@@ -20,6 +20,7 @@ local options = {
     java = {},
     cs = {},
     go = { "gofmt" },
+    kotlin = { "ktlint" },
     rust = { "rustfmt" },
   },
 
