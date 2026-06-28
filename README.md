@@ -37,7 +37,6 @@ nvim --headless "+Lazy! sync" +qa
 | Go                             | gopls                 | gofmt        |
 | HTML / CSS                     | html, cssls           | prettier     |
 | Java                           | jdtls                 | LSP fallback |
-| KDL                            | —                     | kdlfmt       |
 | JavaScript / TypeScript / JSON | ts_ls, jsonls         | prettier     |
 | Kotlin                         | kotlin_lsp            | ktlint       |
 | Lua                            | —                     | stylua       |
