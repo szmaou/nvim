@@ -22,6 +22,7 @@ local options = {
     cs = {},
     go = { "gofmt" },
     kotlin = { "ktlint" },
+    kdl = { "kdlfmt" },
     rust = { "rustfmt" },
   },
 
