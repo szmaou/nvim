@@ -60,7 +60,7 @@ nvim --headless "+Lazy! sync" +qa
 
 `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`,
 `bash`, `python`, `java`, `c`, `cpp`, `c_sharp`, `go`, `rust`, `vue`, `qmljs`,
-`kotlin`, `toml`, `xml`
+`kotlin`, `toml`, `xml`, `markdown`, `query`
 
 ## Custom Keymaps
 
