@@ -4,6 +4,7 @@ local options = {
     bash = { "beautysh" },
     zsh = { "beautysh" },
     fish = { "fish_indent" },
+    xml = { "xmllint" },
     toml = { "taplo" },
     lua = { "stylua" },
     css = { "prettier" },
@@ -20,6 +21,7 @@ local options = {
     java = {},
     cs = {},
     go = { "gofmt" },
+    kotlin = { "ktlint" },
     rust = { "rustfmt" },
   },
 
