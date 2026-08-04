@@ -36,19 +36,15 @@ nvim --headless "+Lazy! sync" +qa
 | Fish                           | —                     | fish_indent  |
 | Go                             | gopls                 | gofmt        |
 | HTML / CSS                     | html, cssls           | prettier     |
-| Java                           | jdtls                 | LSP fallback |
 | JavaScript / TypeScript / JSON | ts_ls, jsonls         | prettier     |
-| Kotlin                         | kotlin_lsp            | ktlint       |
 | Lua                            | —                     | stylua       |
 | Markdown                       | marksman              | prettier     |
 | Python                         | pyright               | ruff         |
-| QML                            | qmlls                 | qmlls        |
 | Rust                           | rust_analyzer         | rustfmt      |
 | Shell (sh, bash, zsh)          | bashls                | beautysh     |
 | Tailwind CSS                   | tailwindcss           | —            |
 | TOML                           | —                     | taplo        |
 | Vue                            | vue_ls                | prettier     |
-| XML                            | lemminx               | xmllint      |
 
 ## Extra Plugins
 
@@ -59,8 +55,8 @@ nvim --headless "+Lazy! sync" +qa
 ## Treesitter
 
 `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`,
-`bash`, `python`, `java`, `c`, `cpp`, `c_sharp`, `go`, `rust`, `vue`, `qmljs`,
-`kotlin`, `toml`, `xml`, `markdown`, `query`
+`bash`, `python`, `c`, `cpp`, `c_sharp`, `go`, `rust`, `vue`,
+`toml`, `markdown`, `query`
 
 ## Custom Keymaps
 
