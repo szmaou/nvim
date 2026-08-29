@@ -30,16 +30,14 @@ return {
         "json",
         "bash",
         "python",
-        "java",
         "c",
         "cpp",
         "c_sharp",
         "go",
         "rust",
+        "php",
+        "phpdoc",
         "vue",
-        "qmljs",
-        "kotlin",
-        "xml",
         "markdown",
         "toml",
         "query",
@@ -70,5 +68,21 @@ return {
     "mbbill/undotree",
     lazy = true,
     cmd = "UndotreeToggle",
+  },
+
+  -- Codesnap
+  {
+    "mistricky/codesnap.nvim",
+    build = "make",
+    cmd = { "CodeSnap", "CodeSnapSave" },
+    keys = {
+      { "<leader>cs", "<cmd>CodeSnap<cr>", mode = "x", desc = "Codesnap: Save to clipboard" },
+    },
+    opts = {
+      save_path = "~/Pictures/Screenshots",
+      has_breadcrumbs = true,
+      bg_theme = "bamboo",
+      watermark = "",
+    },
   },
 }

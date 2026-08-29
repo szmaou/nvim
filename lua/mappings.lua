@@ -19,3 +19,16 @@ map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Markdown: Tog
 
 -- Undotree
 map("n", "<leader>u", "<cmd>UndotreeToggle<cr>", { desc = "Toggle undotree" })
+
+-- volt/menu
+map("n", "<C-t>", function()
+  require("menu").open("default")
+end, { desc = "Menu: open default" })
+
+map({ "n", "v" }, "<RightMouse>", function()
+  require("menu.utils").delete_old_menus()
+  vim.cmd.exec '"normal! \\<RightMouse>"'
+  local buf = vim.api.nvim_win_get_buf(vim.fn.getmousepos().winid)
+  local options = vim.bo[buf].ft == "NvimTree" and "nvimtree" or "default"
+  require("menu").open(options, { mouse = true })
+end, { desc = "Menu: open context" })

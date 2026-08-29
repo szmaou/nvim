@@ -7,18 +7,41 @@ local M = {}
 
 M.base46 = {
   theme = "tokyodark",
-
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+  transparency = false,
+  theme_toggle = { "tokyodark", "onedark" },
 }
 
-M.nvdash = { load_on_startup = true }
 M.ui = {
+  cmp = {
+    style = "atom",
+  },
+  statusline = {
+    theme = "vscode_colored",
+  },
   tabufline = {
     lazyload = false,
   },
+}
+
+M.nvdash = { load_on_startup = true }
+
+M.term = {
+  float = {
+    relative = "editor",
+    row = 0.3,
+    col = 0.25,
+    width = 0.5,
+    height = 0.4,
+    border = "single",
+  },
+}
+
+M.colorify = {
+  enabled = true,
+}
+
+M.mason = {
+  pkgs = {},
 }
 
 return M
