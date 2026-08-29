@@ -35,6 +35,8 @@ return {
         "c_sharp",
         "go",
         "rust",
+        "php",
+        "phpdoc",
         "vue",
         "markdown",
         "toml",
@@ -66,5 +68,21 @@ return {
     "mbbill/undotree",
     lazy = true,
     cmd = "UndotreeToggle",
+  },
+
+  -- Codesnap
+  {
+    "mistricky/codesnap.nvim",
+    build = "make",
+    cmd = { "CodeSnap", "CodeSnapSave" },
+    keys = {
+      { "<leader>cs", "<cmd>CodeSnap<cr>", mode = "x", desc = "Codesnap: Save to clipboard" },
+    },
+    opts = {
+      save_path = "~/Pictures/Screenshots",
+      has_breadcrumbs = true,
+      bg_theme = "bamboo",
+      watermark = "",
+    },
   },
 }

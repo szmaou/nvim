@@ -39,6 +39,7 @@ nvim --headless "+Lazy! sync" +qa
 | JavaScript / TypeScript / JSON | ts_ls, jsonls         | prettier     |
 | Lua                            | —                     | stylua       |
 | Markdown                       | marksman              | prettier     |
+| PHP                            | intelephense          | php-cs-fixer |
 | Python                         | pyright               | ruff         |
 | Rust                           | rust_analyzer         | rustfmt      |
 | Shell (sh, bash, zsh)          | bashls                | beautysh     |
@@ -51,12 +52,13 @@ nvim --headless "+Lazy! sync" +qa
 - **markdown-preview.nvim** — live markdown preview
 - **undotree** — visual undo history
 - **cord.nvim** — Discord Rich Presence
+- **codesnap.nvim** — code snapshot to clipboard/image
 
 ## Treesitter
 
 `vim`, `lua`, `vimdoc`, `html`, `css`, `javascript`, `typescript`, `json`,
-`bash`, `python`, `c`, `cpp`, `c_sharp`, `go`, `rust`, `vue`,
-`toml`, `markdown`, `query`
+`bash`, `python`, `c`, `cpp`, `c_sharp`, `go`, `rust`, `php`, `phpdoc`,
+`vue`, `toml`, `markdown`, `query`
 
 ## Custom Keymaps
 
@@ -67,4 +69,5 @@ nvim --headless "+Lazy! sync" +qa
 | `<leader>q`   | Quit                      |
 | `<A-Up/Down>` | Move line up/down (n/i/v) |
 | `<leader>mp`  | Toggle markdown preview   |
+| `<leader>cs` (visual) | Codesnap: Save to clipboard |
 | `<leader>u`   | Toggle undotree           |

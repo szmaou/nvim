@@ -17,6 +17,7 @@ local options = {
     c = { "clang-format" },
     cpp = { "clang-format" },
     cs = {},
+    php = { "php-cs-fixer" },
     go = { "gofmt" },
     rust = { "rustfmt" },
   },
